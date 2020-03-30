@@ -1,0 +1,16 @@
+version: '2'
+services:
+    zoo:
+        container_name: zookeeper
+        image: zookeeper:3.4.13
+        restart: always
+        ports:
+            - 2181:2181
+        environment:
+                ZOO_TICK_TIME: ${ZOO_TICK_TIME}
+                ZOO_INIT_LIMIT: ${ZOO_INIT_LIMIT}
+                ZOO_SYNC_LIMIT: ${ZOO_SYNC_LIMIT}
+        volumes:
+            - "${ZOO_DIR}/data:/data"
+            - "${ZOO_DIR}/config:/conf"
+            - "${ZOO_DIR}/logs:/datalog"
