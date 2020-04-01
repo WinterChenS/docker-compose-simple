@@ -1,0 +1,19 @@
+version: "2"
+services:
+  qbittorrent:
+    image: linuxserver/qbittorrent
+    container_name: qbittorrent
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Europe/London
+      - UMASK_SET=022
+      - WEBUI_PORT=8090
+    volumes:
+      - "${QBITTERRT_CONFIG}:/config"
+      - ~/workspace/DLNA:/downloads
+    ports:
+      - 6881:6881
+      - 6881:6881/udp
+      - 8090:8090
+    restart: unless-stopped
