@@ -1,0 +1,12 @@
+version: '3.6'
+services:
+  kafka_manager:
+    image: hlebalbau/kafka-manager:stable
+    ports:
+      - "9000:9000"
+    environment:
+      ZK_HOSTS: "118.25.36.41:21811"
+      KAFKA_MANAGER_AUTH_ENABLED: "true"
+      KAFKA_MANAGER_USERNAME: admin
+      KAFKA_MANAGER_PASSWORD: Aa123456
+    command: -Dpidfile.path=/dev/null
