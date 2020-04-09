@@ -1,0 +1,15 @@
+version: '3.1'
+
+services:
+
+  owncloud:
+    image: owncloud
+    restart: always
+    ports:
+      - 8093:80
+    volumes:
+      - '${OWN_DIR}:/var/www/html'
+      - '${OWN_DIR}/apps:/var/www/html/apps'
+      - '${OWN_DIR}/config:/var/www/html/config'
+      - '${OWN_DIR}/data:/var/www/html/data'
+      - '${OWN_DIR}/sources.list:/etc/apt/sources.list'
