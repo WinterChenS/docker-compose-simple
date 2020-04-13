@@ -1,0 +1,20 @@
+version: '3'
+
+services: 
+    aria2:
+      container_name: aria2_pro
+      image: p3terx/aria2-pro
+      ports:
+          - "6800:6800"
+          - "6888:6888"
+          - "6888:6888/udp"
+      network_mode: host
+      restart: always
+      environment:
+           PUID: 1000
+           PGID: 1000
+           RPC_SECRET: 123456
+      volumes:
+           - "${ARIA_DIR}/aria2-config:/config"           
+           - "${ARIA_DIR}/aria2-downloads:/downloads"      
+           # https://p3terx.com/archives/docker-aria2-pro.html               
