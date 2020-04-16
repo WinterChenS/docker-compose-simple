@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+    elasticsearch:
+        container_name: elasticsearch-armhf
+        image: pestotoast/elasticsearch-armhf
+        ports:
+           - "9200:9200"
+           - "9300:9300"
+        restart: always
+        volumes:
+                # - "${ES_DIR}/config:/elasticsearch/config/"
+             - "${ES_DIR}/data:/var/data/elasticsearch" 
