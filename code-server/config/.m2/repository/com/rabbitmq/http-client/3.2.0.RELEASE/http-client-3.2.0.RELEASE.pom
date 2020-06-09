@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.rabbitmq</groupId>
+  <artifactId>http-client</artifactId>
+  <version>3.2.0.RELEASE</version>
+  <name>Java client for the RabbitMQ HTTP API</name>
+  <description>Java client for the RabbitMQ HTTP API</description>
+  <url>https://github.com/rabbitmq/hop</url>
+  <organization>
+    <name>RabbitMQ</name>
+    <url>https://www.rabbitmq.com/</url>
+  </organization>
+  <licenses>
+    <license>
+      <name>The Apache Software License, Version 2.0</name>
+      <url>https://www.apache.org/licenses/LICENSE-2.0.txt</url>
+      <distribution>repo</distribution>
+    </license>
+  </licenses>
+  <developers>
+    <developer>
+      <id>mklishin</id>
+      <name>Michael Klishin</name>
+      <email>mklishin@pivotal.io</email>
+    </developer>
+    <developer>
+      <id>acogoluegnes</id>
+      <name>Arnaud Cogoluègnes</name>
+      <email>acogoluegnes@pivotal.io</email>
+    </developer>
+  </developers>
+  <scm>
+    <connection>scm:git:https://github.com/rabbitmq/hop.git</connection>
+    <developerConnection>scm:git:git@github.com:rabbitmq/hop.git</developerConnection>
+    <url>https://github.com/rabbitmq/hop</url>
+  </scm>
+  <issueManagement>
+    <system>GitHub</system>
+    <url>https://github.com/rabbitmq/hop/issues</url>
+  </issueManagement>
+  <dependencies>
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-web</artifactId>
+      <version>5.1.5.RELEASE</version>
+      <scope>compile</scope>
+      <optional>true</optional>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.httpcomponents</groupId>
+      <artifactId>httpclient</artifactId>
+      <version>4.5.6</version>
+      <scope>compile</scope>
+      <optional>true</optional>
+    </dependency>
+    <dependency>
+      <groupId>com.fasterxml.jackson.core</groupId>
+      <artifactId>jackson-databind</artifactId>
+      <version>2.9.8</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>io.projectreactor</groupId>
+      <artifactId>reactor-core</artifactId>
+      <version>3.2.6.RELEASE</version>
+      <scope>compile</scope>
+      <optional>true</optional>
+    </dependency>
+    <dependency>
+      <groupId>io.projectreactor.netty</groupId>
+      <artifactId>reactor-netty</artifactId>
+      <version>0.8.5.RELEASE</version>
+      <scope>compile</scope>
+      <optional>true</optional>
+    </dependency>
+  </dependencies>
+  <dependencyManagement>
+    <dependencies/>
+  </dependencyManagement>
+</project>

@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+  rabbitmq:
+    hostname: rabbit-mq
+    image: rabbitmq:3-management
+    environment:
+      RABBITMQ_ERLANG_COOKIE: "SWQOKODSQALRPCLNMEQG"
+      RABBITMQ_DEFAULT_USER: "rabbitmq"
+      RABBITMQ_DEFAULT_PASS: "rabbitmq"
+      RABBITMQ_DEFAULT_VHOST: "/"
+    ports:
+      - 15673:15672
+      - 5673:5672
+    restart: always
+    volumes:
+      - "./data:/var/lib/rabbitmq"
